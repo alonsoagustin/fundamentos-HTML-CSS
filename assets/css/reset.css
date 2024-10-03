@@ -1,0 +1,52 @@
+/* Reset general de márgenes, rellenos y bordes */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Reset de tipografía y tamaño de fuente */
+html,
+body {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1;
+  text-align: left;
+  vertical-align: baseline;
+}
+
+/* Reset de listas no ordenadas*/
+ul {
+  list-style: none;
+}
+
+/* Reset de imágenes*/
+img {
+  display: block;
+  width: 100%;
+}
+
+/* Reset de formularios */
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Reset de botones */
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Reset de enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
