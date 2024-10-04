@@ -1,0 +1,130 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  background-image: url(/assets/img/background1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.overlay {
+  padding-top: 2.7rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero__header {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.hero__title {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #bf2821;
+  font-size: xx-large;
+  -webkit-text-stroke: 0.5px #ffd700;
+}
+
+.hero__tagline {
+  text-align: center;
+  color: #bf2821;
+  font-size: medium;
+  -webkit-text-stroke: 0.2px #ffd700;
+}
+
+.hero__bg-image {
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  .no-mobile {
+    display: none;
+    filter: brightness(85%);
+  }
+  .mobile {
+    filter: brightness(90%);
+  }
+}
+
+.hero__message {
+  width: 80px;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  text-align: center;
+  font-size: small;
+  color: #ffd700;
+  animation: moveUpDown 2s 5;
+  p {
+    font-size: smaller;
+  }
+  span {
+    display: block;
+    font-size: x-large;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0); /* posición inicial */
+  }
+  50% {
+    transform: translateY(-10px); /* mueve hacia arriba */
+  }
+  100% {
+    transform: translateY(0); /* vuelve a la posición inicial */
+  }
+}
+.about {
+  padding-top: 3rem;
+}
+
+@media screen and (width > 350px) {
+  .hero__bg-image {
+    width: 50%;
+  }
+}
+
+@media screen and (width > 420px) {
+  .hero {
+    background-position: top;
+  }
+  .hero__bg-image {
+    width: 40%;
+  }
+}
+
+@media screen and (width > 500px) {
+  .hero {
+    background-image: url(/assets/img/background.jpeg);
+    background-size: 100px;
+    background-repeat: repeat;
+  }
+  .hero__bg-image {
+    max-width: 208px;
+  }
+}
+
+@media screen and (width > 620px) {
+  .hero__bg-image {
+    width: 70%;
+    max-width: 480px;
+    .mobile {
+      display: none;
+    }
+    .no-mobile {
+      display: block;
+    }
+  }
+  .hero__message {
+    display: none;
+  }
+}
