@@ -1,7 +1,7 @@
 .hero {
   height: 100vh;
   position: relative;
-  background-image: url(/assets/img/background1.png);
+  background-image: url(assets/img/background1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -104,7 +104,7 @@
 
 @media screen and (width > 500px) {
   .hero {
-    background-image: url(/assets/img/background.jpeg);
+    background-image: url(assets/img/background.jpeg);
     background-size: 100px;
     background-repeat: repeat;
   }
