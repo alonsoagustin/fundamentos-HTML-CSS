@@ -16,7 +16,7 @@
   position: relative;
   z-index: 1;
   padding-top: 3rem;
-  height: 100vh;
+  height: 100dvh; /* probando dynamic viewport height*/
   display: flex;
   gap: 1.5rem;
   flex-direction: column;
