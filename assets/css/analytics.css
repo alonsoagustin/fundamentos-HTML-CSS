@@ -90,17 +90,22 @@
 }
 
 #first {
-  width: 98%;
+  max-width: 98%;
+  animation: fillProgress 1.5s ease-in-out forwards;
 }
 #second {
-  width: 85%;
+  max-width: 85%;
+  animation: fillProgress 2.5s ease-in-out forwards;
 }
 #third {
-  width: 99%;
+  max-width: 99%;
+  animation: fillProgress 2s ease-in-out forwards;
 }
 #fourth {
-  width: 80%;
+  max-width: 80%;
+  animation: fillProgress 1.8s ease-in-out forwards;
 }
+
 .analytics__conteiner-ctas {
   margin-top: 1rem;
   border-radius: 0.3rem;
@@ -129,4 +134,13 @@
 .analytics__cta:hover {
   color: #000;
   background-color: #ffd700;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
