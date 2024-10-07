@@ -147,6 +147,7 @@ fieldset {
   }
 
   button:hover {
+    margin-top: 1rem;
     color: #000;
     background-color: #ffd700;
   }
