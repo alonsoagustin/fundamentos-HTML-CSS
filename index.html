@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/hero.css" />
     <link rel="stylesheet" href="assets/css/about.css" />
     <link rel="stylesheet" href="assets/css/analytics.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
 
     <link
       rel="stylesheet"
@@ -180,6 +181,97 @@
             <a class="analytics__cta" href="#works">Ver crímenes resueltos</a>
           </div>
         </div>
+      </section>
+      <section id="contact" class="contact">
+        <h2 class="contact__title">Confidencial</h2>
+        <form method="post">
+          <div class="contact__form-element">
+            <label for="name">Nombre:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Escribe tu nombre aquí"
+              required
+            />
+          </div>
+          <div class="contact__form-element">
+            <label for="surname">Apellido:</label>
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              placeholder="Escribe tu apellido aquí"
+              required
+            />
+          </div>
+          <div class="contact__form-element">
+            <label for="email">Correo:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Escribe tu correo aquí"
+              required
+            />
+          </div>
+          <div class="contact__form-element">
+            <label for="phone">Teléfono:</label>
+            <input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="Escribe tu teléfono aquí"
+              required
+            />
+          </div>
+          <fieldset class="contact__form-element">
+            <legend>¿Cómo me conociste?</legend>
+            <div class="radio-container">
+              <label for="friend">A través de un amigo</label>
+              <input
+                type="radio"
+                name="how-heard"
+                id="friend"
+                value="friend"
+                required
+              />
+            </div>
+            <div class="radio-container">
+              <label for="tv">Vi tus casos en la televisión</label>
+              <input
+                type="radio"
+                name="how-heard"
+                id="tv"
+                value="tv"
+                required
+              />
+            </div>
+            <div class="radio-container">
+              <label for="internet">Leyendo sobre ti en internet</label>
+              <input
+                type="radio"
+                name="how-heard"
+                id="internet"
+                value="internet"
+                required
+              />
+            </div>
+          </fieldset>
+          <div class="contact__form-element container-message">
+            <label class="label-message" for="message">Mensaje:</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Escribe tu mensaje aquí"
+              required
+            ></textarea>
+          </div>
+          <div class="form__actions">
+            <button type="reset">Borrar</button>
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
       </section>
     </main>
     <footer></footer>
