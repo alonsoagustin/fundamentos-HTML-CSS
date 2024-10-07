@@ -258,12 +258,17 @@
               />
             </div>
           </fieldset>
+          <div class="contact__form-element subscribe-container">
+            <label for="subscribe">Quiero suscribirme al newsletter</label>
+            <input type="checkbox" name="subscribed" id="subscribe" />
+          </div>
           <div class="contact__form-element container-message">
             <label class="label-message" for="message">Mensaje:</label>
             <textarea
               name="message"
               id="message"
               placeholder="Escribe tu mensaje aquí"
+              maxlength="180"
               required
             ></textarea>
           </div>
