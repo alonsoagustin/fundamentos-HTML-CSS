@@ -25,16 +25,15 @@
 .content__title-front {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100dvw;
   margin-top: 10rem;
-  /* background-color: burlywood; */
   p {
     font-size: 14rem;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     color: #a7a7a7;
     filter: brightness(75%);
     z-index: 20;
-    /* -webkit-text-stroke: #fff 7px; */
   }
   #last {
     z-index: 2;
