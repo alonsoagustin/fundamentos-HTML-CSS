@@ -5,7 +5,8 @@
   justify-content: center;
   align-items: center;
   background-color: aqua;
-  padding: 1rem;
+  padding-top: 0;
+  padding-bottom: 1.5rem;
   border-top: solid 1px #a1a1a1;
   background-color: #000;
 }
@@ -40,7 +41,7 @@
   justify-content: center;
   align-items: center;
   .icon {
-    width: 1.2rem;
+    width: 1.5rem;
     fill: #fff;
     transition: 0.3s ease-in-out;
   }
