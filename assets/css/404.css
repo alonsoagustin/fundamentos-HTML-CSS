@@ -39,7 +39,7 @@
 
 .content__title-front-image {
   filter: invert(1) brightness(2);
-  width: 32%;
+  width: 40%;
 }
 
 .content__title-front-absolute {
@@ -53,7 +53,7 @@
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .content__do-not-cross {
@@ -62,7 +62,7 @@
   align-items: center;
   width: 100dvw;
   height: 2rem;
-  filter: brightness(90%) saturate(155%);
+  filter: brightness(95%) saturate(155%);
   border-bottom: #8f8f8f solid 0.8px;
   border-top: #fff solid 0.8px;
   background: linear-gradient(to top, #dfb302 0%, #fee371 100%);
