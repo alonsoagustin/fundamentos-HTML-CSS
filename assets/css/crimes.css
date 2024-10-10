@@ -1,0 +1,185 @@
+main {
+  background-image: url("/assets/img/background.jpeg");
+  background-size: 150px;
+  background-repeat: repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+
+.hero {
+  overflow: hidden;
+  height: 100dvh;
+  padding: 2rem;
+  padding-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero__title {
+  margin-top: 0.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #bf2821;
+  -webkit-text-stroke: 1px #ffd700;
+}
+
+.hero__container-description {
+  color: #cbcbcb;
+  line-height: 1.5;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.hero__cta a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 150px;
+  color: #fff;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 0.3rem;
+  background-color: #bf2821;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero__cta a:hover {
+  color: #000;
+  background-color: #ffd700;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #0000009d;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .hero__container-video {
+  position: relative;
+}
+
+.checkbox:checked + label {
+  display: none;
+}
+
+.hero__container-video {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: absolute;
+  animation: slideFadeIn 2s linear;
+  iframe {
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.crimes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.crimes h2 {
+  padding-top: 3.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #bf2821;
+  -webkit-text-stroke: 1px #ffd700;
+}
+
+.crimes__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  padding: 2rem 0;
+}
+
+.crimes__crime {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.8rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+  filter: brightness(90%);
+  animation: fadeIn linear;
+  animation-timeline: view(80% 0);
+  background-color: #bf2821;
+}
+
+.crime_image {
+  height: 80%;
+  img {
+    width: 100%;
+    border: solid 1px #000;
+    border-radius: 0.3rem;
+  }
+}
+
+.crime__info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.crime__info-item {
+  padding: 0.2rem 0.5rem;
+  border: 0.5px solid #ffffff6a;
+  border-radius: 0.5rem;
+  span {
+    color: #ffffff6a;
+    font-weight: bold;
+  }
+}
+
+.crime__summary {
+  color: #fff;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+
+@keyframes slideFadeIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    scale: 0.5;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
