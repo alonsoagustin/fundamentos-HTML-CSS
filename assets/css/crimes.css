@@ -1,5 +1,5 @@
 main {
-  background-image: url("/assets/img/background.jpeg");
+  background-image: url("../img/background.jpeg");
   background-size: 150px;
   background-repeat: repeat;
   position: relative;
