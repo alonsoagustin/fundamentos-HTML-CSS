@@ -2,37 +2,10 @@
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: aqua;
-  padding-top: 0;
-  padding-bottom: 1.5rem;
-  border-top: solid 1px #a1a1a1;
+  padding: 1.5rem 1rem;
   background-color: #000;
-}
-
-.footer__navbar-list {
-  display: flex;
-  gap: 0.75rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 0;
-  .arrow {
-    fill: #a1a1a1;
-    transition: 0.3s ease-in-out;
-  }
-  a {
-    font-size: 0.75rem;
-    color: #fff;
-    transition: 0.3s ease-in-out;
-  }
-  a:hover {
-    color: #ffd700;
-  }
-  .arrow:hover {
-    fill: #fff;
-  }
 }
 
 .footer__social-media-list {
