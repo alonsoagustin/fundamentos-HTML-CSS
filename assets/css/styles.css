@@ -126,7 +126,7 @@ body {
 .h2,
 .h3,
 .h4 {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   text-wrap: balance;
   text-align: center;
   font-size: 4rem;
