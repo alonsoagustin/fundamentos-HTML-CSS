@@ -186,6 +186,7 @@ body {
 }
 
 .section {
+  padding-top: 1.5rem;
   height: 100dvh;
   display: flex;
   gap: 2rem;
