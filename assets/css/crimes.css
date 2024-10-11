@@ -19,7 +19,7 @@ main {
   overflow: hidden;
   height: 100dvh;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
