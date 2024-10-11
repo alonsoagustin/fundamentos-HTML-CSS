@@ -13,13 +13,9 @@
 }
 
 .hero {
-  position: relative;
-  z-index: 1;
-  padding-top: 3rem;
-  height: 100dvh; /* probando dynamic viewport height*/
-  display: flex;
-  flex-direction: column;
+  gap: 0;
   justify-content: space-around;
+  height: 100dvh;
 }
 
 .hero__image {
@@ -32,23 +28,34 @@
 
 .hero__message {
   margin: 0 2rem;
-  height: 3rem;
-  border-radius: 0.2rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
   display: flex;
-  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.788);
 }
 
-.container {
+.text {
+  opacity: 0.5;
+  font-weight: bolder;
+}
+
+.hero__container {
+  width: 100%;
+  border-radius: 0.3rem;
+  border: solid 1px var(--color-secondary-500);
+  display: flex;
+  align-items: center;
   margin: 0 1rem;
   padding: 0.3rem;
   overflow: hidden;
   background-color: rgba(138, 41, 36, 0.808);
-  p {
-    text-align: center;
+  .text {
+    font-size: 1rem;
     font-weight: bold;
-    color: #ffd700;
+    color: var(--color-secondary-400);
     animation: moveToLeft 30s linear infinite;
   }
 }
