@@ -1,3 +1,197 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+@import url("assets/css/variables.css");
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  height: 3rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn--primary {
+  color: #fff;
+  background: linear-gradient(
+    var(--color-primary-500),
+    var(--color-primary-600)
+  );
+  z-index: 1;
+}
+
+.btn--primary::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    var(--color-primary-600),
+    var(--color-primary-700)
+  );
+  z-index: -1;
+  transition: all 0.3s linear;
+}
+
+.btn--primary:hover::before {
+  opacity: 1;
+}
+
+.btn--primary:active::before {
+  opacity: 0; /* Oculta el pseudo-elemento before al hacer clic*/
+}
+
+.btn--primary:active {
+  background: linear-gradient(
+    var(--color-primary-700),
+    var(--color-primary-800)
+  );
+  transform: scale(0.95);
+}
+
+.btn--primary:active::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0.5rem;
+}
+
+.btn--secondary {
+  color: var(--color-secondary-950);
+  background: linear-gradient(
+    var(--color-secondary-500),
+    var(--color-secondary-600)
+  );
+  z-index: 1;
+}
+
+.btn--secondary::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    var(--color-secondary-600),
+    var(--color-secondary-700)
+  );
+  z-index: -1;
+  transition: all 0.3s linear;
+}
+
+.btn--secondary:hover::before {
+  opacity: 1;
+}
+
+.btn--secondary:active::before {
+  opacity: 0; /* Oculta el pseudo-elemento before al hacer clic*/
+}
+
+.btn--secondary:active {
+  background: linear-gradient(
+    var(--color-secondary-700),
+    var(--color-secondary-800)
+  );
+  transform: scale(0.95);
+}
+
+.btn--secondary:active::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0.5rem;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  padding: 1rem;
+  text-wrap: balance;
+  text-align: center;
+  font-size: 4rem;
+  color: var(--color-primary-500);
+  -webkit-text-stroke: 1px var(--color-secondary-500);
+}
+
+.h2 {
+  font-size: 2.5rem;
+}
+
+.p1,
+.p2,
+.p3,
+.p4 {
+  padding: 0.5rem 1rem;
+  text-wrap: balance;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: var(--color-secondary-700);
+}
+
+.text-paragraph,
+.text,
+.label,
+.input {
+  /* text-wrap: balance; */
+  text-align: left;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.text-paragraph {
+  padding: 0 2rem;
+}
+
+.text {
+  font-size: 0.8rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: bolder;
+}
+
+.input {
+  background-color: transparent;
+}
+
+.input::placeholder {
+  font-size: 0.9rem;
+  color: var(---color-white);
+  opacity: 0.6;
+}
+
+.section {
+  height: 100dvh;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-black);
+  position: relative;
+  z-index: 1;
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detective Conan</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/hero.css" />
@@ -81,8 +82,8 @@
       <section id="hero" class="hero">
         <div class="overlay"></div>
         <header class="hero__header">
-          <h1 class="hero__title">Detective Conan</h1>
-          <p class="hero__subtitle">"La verdad siempre sale a la luz"</p>
+          <h1 class="h1">Detective Conan</h1>
+          <p class="p1">"La verdad siempre sale a la luz"</p>
         </header>
         <div class="hero__content">
           <div class="hero__image">
@@ -97,16 +98,16 @@
           </div>
         </div>
       </section>
-      <section id="about" class="about">
-        <h2 class="about__title">Conan Edogawa</h2>
+      <section id="about" class="section">
+        <h2 class="h2">Conan Edogawa</h2>
         <div class="about__content">
-          <p>
+          <p class="text-paragraph">
             Soy un famoso detective que, tras ser envenenado, me ví obligado a
             ocultar mi identidad bajo el nombre de Conan Edogawa. Aunque estoy
             atrapado en el cuerpo de un niño, mi mente sigue siendo aguda y mi
             pasión por resolver misterios es más fuerte que nunca.
           </p>
-          <p>
+          <p class="text-paragraph">
             Utilizo mi ingenio y determinación para enfrentar cada caso,
             desentrañando engaños y revelando secretos oscuros, mientras
             permanezco un paso adelante de aquellos que intentaron hacerme daño.
@@ -115,81 +116,74 @@
           </p>
         </div>
         <div class="about__conteiner-ctas">
-          <a class="about__cta" href="#contact">Contactar</a>
+          <a class="btn btn--secondary" href="#contact">Contactar</a>
 
-          <a class="about__cta" href="crimes.html">Crímenes</a>
+          <a class="btn btn--primary" href="#analytics">Estadísticas</a>
         </div>
       </section>
-      <section id="analytics" class="analytics">
-        <h2 class="analytics__title">Estadísticas</h2>
-        <div class="analytics__content">
-          <p class="analytics__description">
-            He resuelto todos los casos en los que he trabajado, aunque en
-            muchos de ellos mi vida ha estado en peligro. Siempre he conseguido
-            identificar a los culpables y, en numerosas ocasiones, he logrado
-            que confiesen su crimen.
-          </p>
-          <ul class="analytics__list">
-            <li class="analytics__list-item">
-              <p class="analytics__label-list-item">
-                Identificación de culpables
-              </p>
-              <div class="analytics__container-progress-bar">
-                <p>0%</p>
-                <div class="container">
-                  <div id="first" class="analytics__progress-bar"></div>
-                </div>
-                <p>98%</p>
+      <section id="analytics" class="section">
+        <h2 class="h2">Estadísticas</h2>
+        <p class="text-paragraph">
+          He resuelto todos los casos en los que he trabajado, aunque en muchos
+          de ellos mi vida ha estado en peligro. Siempre he conseguido
+          identificar a los culpables y, en numerosas ocasiones, he logrado que
+          confiesen su crimen.
+        </p>
+        <ul class="analytics__list">
+          <li class="analytics__list-item">
+            <p class="text">~ Identificación de culpables ~</p>
+            <div class="analytics__container-progress-bar">
+              <p class="text">0%</p>
+              <div class="container">
+                <div id="first" class="analytics__progress-bar"></div>
               </div>
-            </li>
-            <li class="analytics__list-item">
-              <p class="analytics__label-list-item">
-                Prevención de crímenes futuros
-              </p>
-              <div class="analytics__container-progress-bar">
-                <p>0%</p>
-                <div class="container">
-                  <div id="second" class="analytics__progress-bar"></div>
-                </div>
-                <p>85%</p>
+              <p class="text">98%</p>
+            </div>
+          </li>
+          <li class="analytics__list-item">
+            <p class="text">~ Prevención de crímenes futuros ~</p>
+            <div class="analytics__container-progress-bar">
+              <p class="text">0%</p>
+              <div class="container">
+                <div id="second" class="analytics__progress-bar"></div>
               </div>
-            </li>
-            <li class="analytics__list-item">
-              <p class="analytics__label-list-item">Resolución de casos</p>
-              <div class="analytics__container-progress-bar">
-                <p>0%</p>
-                <div class="container">
-                  <div id="third" class="analytics__progress-bar"></div>
-                </div>
-                <p>99%</p>
+              <p class="text">85%</p>
+            </div>
+          </li>
+          <li class="analytics__list-item">
+            <p class="text">~ Resolución de casos ~</p>
+            <div class="analytics__container-progress-bar">
+              <p class="text">0%</p>
+              <div class="container">
+                <div id="third" class="analytics__progress-bar"></div>
               </div>
-            </li>
-            <li class="analytics__list-item">
-              <p class="analytics__label-list-item">
-                Éxito en situaciones de peligro
-              </p>
-              <div class="analytics__container-progress-bar">
-                <p>0%</p>
-                <div class="container">
-                  <div id="fourth" class="analytics__progress-bar"></div>
-                </div>
-                <p>80%</p>
+              <p class="text">99%</p>
+            </div>
+          </li>
+          <li class="analytics__list-item">
+            <p class="text">~ Éxito en situaciones de peligro ~</p>
+            <div class="analytics__container-progress-bar">
+              <p class="text">0%</p>
+              <div class="container">
+                <div id="fourth" class="analytics__progress-bar"></div>
               </div>
-            </li>
-          </ul>
-        </div>
+              <p class="text">80%</p>
+            </div>
+          </li>
+        </ul>
         <div class="analytics__conteiner-ctas">
-          <a class="analytics__cta" href="#contact">Contactar</a>
+          <a class="btn btn--secondary" href="#contact">Contactar</a>
 
-          <a class="analytics__cta" href="crimes.html">Crímenes</a>
+          <a class="btn btn--primary" href="crimes.html">Crímenes</a>
         </div>
       </section>
-      <section id="contact" class="contact">
-        <h2 class="contact__title">Confidencial</h2>
+      <section id="contact" class="section">
+        <h2 class="h2">Confidencial</h2>
         <form method="post">
           <div class="contact__form-element">
-            <label for="name">Nombre:</label>
+            <label class="label" for="name">Nombre:</label>
             <input
+              class="input"
               type="text"
               name="name"
               id="name"
@@ -198,8 +192,9 @@
             />
           </div>
           <div class="contact__form-element">
-            <label for="surname">Apellido:</label>
+            <label class="label" for="surname">Apellido:</label>
             <input
+              class="input"
               type="text"
               name="surname"
               id="surname"
@@ -207,21 +202,10 @@
               required
             />
           </div>
-          <!-- 
           <div class="contact__form-element">
-            <label for="email">Correo:</label>
+            <label class="label" for="phone">Teléfono:</label>
             <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Escribe tu correo aquí"
-              required
-            />
-          </div> 
-          -->
-          <div class="contact__form-element">
-            <label for="phone">Teléfono:</label>
-            <input
+              class="input"
               type="number"
               name="phone"
               id="phone"
@@ -232,7 +216,7 @@
           <fieldset class="contact__form-element">
             <legend>¿Cómo me conociste?</legend>
             <div class="radio-container">
-              <label for="friend">A través de un amigo</label>
+              <label class="label" for="friend">A través de un amigo</label>
               <input
                 type="radio"
                 name="how-heard"
@@ -242,7 +226,9 @@
               />
             </div>
             <div class="radio-container">
-              <label for="tv">Vi tus casos en la televisión</label>
+              <label class="label" for="tv"
+                >Vi tus casos en la televisión</label
+              >
               <input
                 type="radio"
                 name="how-heard"
@@ -252,7 +238,9 @@
               />
             </div>
             <div class="radio-container">
-              <label for="internet">Leyendo sobre ti en internet</label>
+              <label class="label" for="internet"
+                >Leyendo sobre ti en internet</label
+              >
               <input
                 type="radio"
                 name="how-heard"
@@ -263,12 +251,15 @@
             </div>
           </fieldset>
           <div class="contact__form-element subscribe-container">
-            <label for="subscribe">Quiero suscribirme al newsletter</label>
+            <label class="label" for="subscribe"
+              >Quiero suscribirme al newsletter</label
+            >
             <input type="checkbox" name="subscribed" id="subscribe" />
           </div>
           <div class="contact__form-element container-message">
-            <label class="label-message" for="message">Mensaje:</label>
+            <label class="label" for="message">Mensaje:</label>
             <textarea
+              class="input"
               name="message"
               id="message"
               placeholder="Escribe tu mensaje aquí"
@@ -278,13 +269,13 @@
             ></textarea>
           </div>
           <div class="form__actions">
-            <button type="reset">Borrar</button>
-            <button type="submit">Enviar</button>
+            <button class="btn btn--primary" type="reset">Borrar</button>
+            <button class="btn btn--secondary" type="submit">Enviar</button>
           </div>
         </form>
       </section>
     </main>
-    <footer class="footer">
+    <footer id="footer" class="section">
       <ul class="footer__social-media-list">
         <li>
           <a href="400.html"
@@ -329,10 +320,10 @@
           </a>
         </li>
       </ul>
-      <a class="footer__info-company" href="404.html">© 2024 Detective Conan</a>
+      <a class="text" href="404.html">© 2024 Detective Conan</a>
       <div class="footer__important-links">
-        <a href="404.html">Privacy & terms</a>
-        <a href="404.html">Sitemap</a>
+        <a class="text" href="404.html">Privacy & terms</a>
+        <a class="text" href="404.html">Sitemap</a>
       </div>
     </footer>
   </body>

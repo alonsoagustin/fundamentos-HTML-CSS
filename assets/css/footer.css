@@ -1,11 +1,7 @@
-.footer {
-  display: flex;
+#footer {
   gap: 1rem;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1.5rem 1rem;
-  background-color: #000;
+  height: 25dvh;
+  align-self: center;
 }
 
 .footer__social-media-list {
@@ -14,7 +10,7 @@
   justify-content: center;
   align-items: center;
   .icon {
-    width: 1.5rem;
+    width: 1.8rem;
     fill: #fff;
     transition: 0.3s ease-in-out;
   }
@@ -23,19 +19,15 @@
   }
 }
 
-.footer__info-company,
-.footer__important-links a {
-  color: #a1a1a1;
-  font-size: 0.75rem;
+#footer .text {
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0.5;
   transition: 0.3s ease-in-out;
 }
 
-.footer__important-links a:hover {
-  color: #fff;
-}
-
-.footer__info-company:hover {
-  color: #fff;
+#footer .text:hover {
+  opacity: 1;
 }
 
 .footer__important-links {

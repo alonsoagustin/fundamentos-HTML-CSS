@@ -18,48 +18,23 @@ main {
 .hero {
   overflow: hidden;
   height: 100dvh;
-  padding: 2rem;
-  padding-top: 3rem;
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.hero__title {
-  margin-top: 0.5rem;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #bf2821;
-  -webkit-text-stroke: 1px #ffd700;
-}
-
-.hero__container-description {
-  color: #cbcbcb;
-  line-height: 1.5;
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-}
-
-.hero__cta a {
-  display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 150px;
-  color: #fff;
-  font-weight: bolder;
-  text-align: center;
-  border-radius: 0.3rem;
-  background-color: #bf2821;
-  transition: all 0.5s ease-in-out;
 }
 
-.hero__cta a:hover {
-  color: #000;
-  background-color: #ffd700;
+.hero__text-container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.hero__cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
@@ -101,14 +76,6 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-}
-
-.crimes h2 {
-  padding-top: 3.5rem;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #bf2821;
-  -webkit-text-stroke: 1px #ffd700;
 }
 
 .crimes__container {

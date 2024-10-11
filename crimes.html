@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crímenes</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/crimes.css" />
@@ -53,16 +54,16 @@
                 <a href="index.html">🏠 Inicio</a>
               </li>
               <li class="sidebar__navbar-list-item">
-                <a href="index.html">📖 ¿Quién soy?</a>
+                <a href="index.html#about">📖 ¿Quién soy?</a>
               </li>
               <li class="sidebar__navbar-list-item">
-                <a href="index.html">📊 Estadísticas</a>
+                <a href="index.html#analytics">📊 Estadísticas</a>
               </li>
               <li class="sidebar__navbar-list-item">
                 <a href="#hero">📚 Crímenes</a>
               </li>
               <li class="sidebar__navbar-list-item">
-                <a href="index.html">📬 Contactar</a>
+                <a href="index.html#contact">📬 Contactar</a>
               </li>
             </ul>
           </nav>
@@ -73,23 +74,23 @@
     <main>
       <div class="overlay"></div>
       <section id="hero" class="hero">
-        <h2 class="hero__title">Crímenes</h2>
-        <div class="hero__container-description">
-          <p>
+        <h2 class="h1">Crímenes</h2>
+        <div class="hero__text-container">
+          <p class="text-paragraph">
             Cada caso es un rompecabezas, y cada pista es una pieza que encaja
             en el misterio. A través de la lógica y la observación aguda, he
             desenredado los hilos más enredados, sacando a la luz la verdad que
             se oculta detrás de cada crimen.
           </p>
 
-          <p>
+          <p class="text-paragraph">
             Aquí están los casos que he resuelto, donde la justicia prevaleció y
             las mentiras fueron expuestas. Porque, al final, la verdad siempre
             sale a la luz.
           </p>
         </div>
-        <div class="hero__cta">
-          <a href="#crimes">Ver más</a>
+        <div class="hero__cta-container">
+          <a class="btn btn--primary" href="#crimes">Ver más</a>
         </div>
         <input class="checkbox" type="checkbox" id="close-video" />
         <label for="close-video">
@@ -106,7 +107,7 @@
         </div>
       </section>
       <section id="crimes" class="crimes">
-        <h2>Destacados</h2>
+        <h2 class="h2">Destacados</h2>
         <div class="crimes__container">
           <article class="crimes__crime">
             <div class="crime_image">
@@ -212,7 +213,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer id="footer" class="section">
       <ul class="footer__social-media-list">
         <li>
           <a href="400.html"
@@ -224,8 +225,9 @@
             >
               <path
                 d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
-              /></svg
-          ></a>
+              />
+            </svg>
+          </a>
         </li>
         <li>
           <a href="400.html">
@@ -256,10 +258,10 @@
           </a>
         </li>
       </ul>
-      <a class="footer__info-company" href="404.html">© 2024 Detective Conan</a>
+      <a class="text" href="404.html">© 2024 Detective Conan</a>
       <div class="footer__important-links">
-        <a href="404.html">Privacy & terms</a>
-        <a href="404.html">Sitemap</a>
+        <a class="text" href="404.html">Privacy & terms</a>
+        <a class="text" href="404.html">Sitemap</a>
       </div>
     </footer>
   </body>
