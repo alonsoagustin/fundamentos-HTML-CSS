@@ -81,5 +81,5 @@ fieldset {
 .form__actions {
   display: flex;
   gap: 3rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
