@@ -1,5 +1,6 @@
 .overlay {
   width: 100vw;
+  min-width: 320px;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -7,56 +8,76 @@
   background-color: rgba(0, 0, 0, 0.2);
   background-image: url("../img/background-hero-1.jpg");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   background-size: cover;
   filter: blur(0.6px);
 }
 
 .hero {
+  width: 100dvw;
+  height: 100dvh;
+  min-width: 320px;
   gap: 0;
   justify-content: space-around;
-  height: 100dvh;
 }
 
-.hero__image {
-  width: 55%;
-  margin: 0 auto;
-  img {
-    filter: brightness(82%);
+.hero__header {
+  .h1 {
+    font-size: clamp(2rem, 8vw, 5rem);
+  }
+  .p1 {
+    font-size: clamp(1rem, 4vw, 2.5rem);
   }
 }
 
-.hero__message {
-  margin: 0 2rem;
-  padding: 1rem;
-  border-radius: 0.3rem;
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.788);
+.hero__header :nth-child(3),
+.hero__header :nth-child(4) {
+  display: none;
 }
 
-.text {
-  opacity: 0.5;
-  font-weight: bolder;
-}
-
-.hero__container {
-  width: 100%;
-  border-radius: 0.3rem;
-  border: solid 1px var(--color-secondary-500);
-  display: flex;
-  align-items: center;
-  margin: 0 1rem;
-  padding: 0.3rem;
-  overflow: hidden;
-  background-color: rgba(138, 41, 36, 0.808);
-  .text {
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--color-secondary-400);
-    animation: moveToLeft 30s linear infinite;
+.hero__content {
+  .hero__image-container {
+    width: 40%;
+    min-width: 128px;
+    max-width: 170px;
+    margin: 0 auto;
+    img {
+      filter: brightness(82%);
+    }
+  }
+  .hero__image-container :last-child {
+    display: none;
+  }
+  .hero__message-container {
+    width: 90%;
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.788);
+    .text {
+      font-size: clamp(0.7rem, 1.8vw, 1rem);
+      opacity: 0.7;
+      font-weight: bolder;
+    }
+    div {
+      width: 100%;
+      border-radius: 0.3rem;
+      border: solid 1px var(--color-secondary-500);
+      display: flex;
+      align-items: center;
+      padding: 0.3rem;
+      overflow: hidden;
+      background-color: rgba(138, 41, 36, 0.808);
+      .text {
+        color: var(--color-secondary-400);
+        animation: moveToLeft 30s linear infinite;
+      }
+    }
   }
 }
 
@@ -71,5 +92,96 @@
 
   100% {
     transform: translateX(-150%);
+  }
+}
+
+@media screen and (width > 340px) {
+  .hero__content {
+    .hero__message-container {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (width > 620px) {
+  .overlay {
+    background-image: url("../img/background-hero-2.jpg");
+    background-position: bottom;
+    filter: blur(0.9px) brightness(50%);
+  }
+}
+
+@media screen and (width > 768px) {
+  .hero {
+    padding-top: 3rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-direction: row;
+  }
+
+  .hero__header {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .hero__header :nth-child(1) {
+    padding-top: 5rem;
+    text-align: left;
+    font-size: clamp(3.7rem, 6.5vw, 5rem);
+  }
+
+  .hero__header :nth-child(2) {
+    display: none;
+  }
+
+  .hero__header :nth-child(3),
+  .hero__header :nth-child(4) {
+    display: block;
+  }
+
+  .hero__header :nth-child(3) {
+    display: block;
+    max-width: 510px;
+    text-align: left;
+    line-height: 1.2;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    color: var(--color-secondary-500);
+    opacity: 0.7;
+
+    span {
+      font-style: italic;
+      letter-spacing: 2px;
+      font-size: inherit;
+    }
+  }
+
+  .hero__header :nth-child(4) {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__content {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 5%;
+    .hero__image-container :first-child {
+      display: none;
+    }
+    .hero__image-container :last-child {
+      display: block;
+    }
+    .hero__message-container {
+      display: none;
+    }
   }
 }
