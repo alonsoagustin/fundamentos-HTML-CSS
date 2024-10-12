@@ -132,6 +132,7 @@ body {
   text-wrap: balance;
   text-align: center;
   font-size: 1rem;
+  font-size: clamp(2rem, 6.5vw, 5rem);
   color: var(--color-primary-500);
   -webkit-text-stroke: 1px var(--color-secondary-500);
 }
@@ -158,6 +159,11 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: var(--color-white);
+}
+
+.text-paragraph {
+  padding: 0.5rem 1.5rem;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 .text {
