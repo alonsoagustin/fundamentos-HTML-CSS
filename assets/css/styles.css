@@ -10,7 +10,7 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 9rem;
+  width: clamp(7rem, 35vw, 9rem);
   height: 3rem;
   padding: 0.5rem;
   border-radius: 0.5rem;

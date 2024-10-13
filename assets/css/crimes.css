@@ -1,34 +1,29 @@
-main {
+body {
   background-image: url("../img/background.jpeg");
   background-size: 150px;
   background-repeat: repeat;
   position: relative;
-  z-index: 1;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
-  z-index: -1;
+  z-index: -999;
 }
 
 .hero {
-  padding-top: 3rem;
-  overflow: hidden;
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  gap: 1rem;
+  position: relative;
+  background-color: transparent;
 }
 
 .hero__text-container {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
+  .text-paragraph {
+    padding: 0.5rem 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
 }
 
 .hero__cta-container {
@@ -38,12 +33,14 @@ main {
 }
 
 .modal {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   width: 100dvw;
   height: 100dvh;
   background-color: #0000009d;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .checkbox {
@@ -51,7 +48,10 @@ main {
 }
 
 .checkbox:checked ~ .hero__container-video {
-  position: relative;
+  position: static;
+  transform: initial;
+  padding: 0 2rem;
+  width: 100%;
 }
 
 .checkbox:checked + label {
@@ -59,13 +59,14 @@ main {
 }
 
 .hero__container-video {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  position: absolute;
-  animation: slideFadeIn 2s linear;
+  position: fixed;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: slideFadeIn 0.5s linear;
+  z-index: 100;
   iframe {
-    z-index: 10;
     height: 100%;
     width: 100%;
   }
@@ -76,14 +77,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .crimes__container {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 3rem;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .crimes__crime {
@@ -95,14 +97,15 @@ main {
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 0.3rem;
-  filter: brightness(90%);
+  /* filter: brightness(90%); */
   animation: fadeIn linear;
-  animation-timeline: view(80% 0);
-  background-color: #bf2821;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 350px;
+  background-color: var(--color-primary-500);
 }
 
 .crime_image {
-  height: 80%;
   img {
     width: 100%;
     border: solid 1px #000;
@@ -121,6 +124,7 @@ main {
   border: 0.5px solid #ffffff6a;
   border-radius: 0.5rem;
   span {
+    font-size: clamp(0.75rem, 3vw, 1rem);
     color: #ffffff6a;
     font-weight: bold;
   }
@@ -129,7 +133,7 @@ main {
 .crime__summary {
   color: #fff;
   line-height: 1.5;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 @keyframes slideFadeIn {
@@ -143,11 +147,45 @@ main {
 
 @keyframes fadeIn {
   from {
-    scale: 0.5;
-    opacity: 0;
+    scale: 0.3;
+    opacity: 0.3;
   }
   to {
     scale: 1;
     opacity: 1;
+  }
+}
+
+@media screen and (width > 620px) {
+  #hero {
+    max-width: clamp(500px, 80vw, 650px);
+    margin: 0 auto;
+  }
+
+  #crimes {
+    padding-top: 3rem;
+    max-width: clamp(500px, 80vw, 650px);
+    margin: 0 auto;
+  }
+
+  .crimes__container {
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    /* align-items: start; */
+  }
+
+  .crimes__crime {
+    width: fit-content;
+  }
+
+  .crime__info-item {
+    span {
+      font-size: clamp(0.8rem, 1.4vw, 1rem);
+    }
+  }
+
+  #footer {
+    width: 100vw;
   }
 }

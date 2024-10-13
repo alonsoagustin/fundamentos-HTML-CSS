@@ -18,12 +18,13 @@
 
 @media screen and (width > 620px) {
   #about {
-    padding: 0 10%;
     padding-top: 3rem;
+    max-width: clamp(500px, 80vw, 650px);
+    margin: 0 auto;
   }
 
   .about__content {
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
     display: grid;
     justify-content: center;
     align-items: center;
